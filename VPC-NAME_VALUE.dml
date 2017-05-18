@@ -91,19 +91,19 @@
     </contexts>
     <mappings>
         <modelMappings>
-            <mappedParameter name="displayName" idRef="6c2b6b9b-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">displayName</mappedParameter>
-            <mappedParameter name="outputs" idRef="fbfdf095-df51-1004-86d2-7ac963ddea2f" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">outputs</mappedParameter>
-            <mappedParameter name="contactInfo" idRef="6c2b6ba1-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">contactInfo</mappedParameter>
-            <mappedParameter name="companyId" idRef="6c2b6b9e-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">companyId</mappedParameter>
-            <mappedParameter name="outputTemplate" idRef="fbfdf098-df51-1004-86d2-7ac963ddea2f" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">outputTemplate</mappedParameter>
-            <mappedParameter name="expireDate" idRef="6c2b6ba4-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">expireDate</mappedParameter>
-            <mappedParameter name="email" idRef="6c2b6ba7-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">email</mappedParameter>
             <mappedParameter name="authToken" idRef="6c2b6baa-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">authToken</mappedParameter>
+            <mappedParameter name="contactInfo" idRef="6c2b6ba1-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">contactInfo</mappedParameter>
+            <mappedParameter name="outputTemplate" idRef="fbfdf098-df51-1004-86d2-7ac963ddea2f" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">outputTemplate</mappedParameter>
+            <mappedParameter name="companyId" idRef="6c2b6b9e-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">companyId</mappedParameter>
+            <mappedParameter name="outputs" idRef="fbfdf095-df51-1004-86d2-7ac963ddea2f" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">outputs</mappedParameter>
+            <mappedParameter name="email" idRef="6c2b6ba7-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">email</mappedParameter>
             <mappedParameter name="inputTemplate" idRef="6c2b6afc-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">inputTemplate</mappedParameter>
+            <mappedParameter name="expireDate" idRef="6c2b6ba4-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">expireDate</mappedParameter>
+            <mappedParameter name="displayName" idRef="6c2b6b9b-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">displayName</mappedParameter>
         </modelMappings>
     </mappings>
     <dependencies>
-        <dependency idRef="fbfdf095-df51-1004-86d2-7ac963ddea2f">
+        <dependency idRef="fbfdf098-df51-1004-86d2-7ac963ddea2f">
             <parameter name="displayName" idRef="6c2b6b9b-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
             <parameter name="companyId" idRef="6c2b6b9e-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
             <parameter name="contactInfo" idRef="6c2b6ba1-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
@@ -111,7 +111,7 @@
             <parameter name="email" idRef="6c2b6ba7-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
             <parameter name="authToken" idRef="6c2b6baa-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
         </dependency>
-        <dependency idRef="fbfdf098-df51-1004-86d2-7ac963ddea2f">
+        <dependency idRef="fbfdf095-df51-1004-86d2-7ac963ddea2f">
             <parameter name="displayName" idRef="6c2b6b9b-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
             <parameter name="companyId" idRef="6c2b6b9e-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
             <parameter name="contactInfo" idRef="6c2b6ba1-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
@@ -160,7 +160,7 @@
             <isMainModelFile value="true"/>
             <isExcuteOnServer value="true"/>
             <fileType>file:///</fileType>
-            <file>/home/dmcdevelopment/VPC/runApp.py</file>
+            <file>/home/dmcdevelopment/VPCfiles/runApp.py</file>
         </auxfile>
     </auxfiles>
 </model>
