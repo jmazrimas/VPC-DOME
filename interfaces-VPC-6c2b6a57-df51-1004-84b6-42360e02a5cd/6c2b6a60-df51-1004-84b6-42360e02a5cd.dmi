@@ -21,7 +21,7 @@
         <parameter id="6c2b6afd-df51-1004-84b6-42360e02a5cd" name="inputTemplate">
             <currentType value="String"/>
             <data>
-                <dataobject type="String">&lt;h1&gt;WHat the hell&lt;/h1&gt;</dataobject>
+                <dataobject type="String">&lt;p id="displayName"&gt; &lt;p&gt;Display Name:&lt;/p&gt; Default &lt;/p&gt; &lt;p&gt;Company Id:&lt;/p&gt; &lt;p id="companyId"&gt; Default &lt;/p&gt; &lt;script&gt; $(document).ready(function() { var scope = angular.element($(".ng-scope")[0]).scope(); var displayName = scope.userData.displayName; var companyId = scope.userData.companyId; $('#displayName').text(displayName); $('#companyId').text(companyId); }); &lt;/script&gt;</dataobject>
             </data>
         </parameter>
         <parameter id="6c2b6a6b-df51-1004-84b6-42360e02a5cd" name="VPCUrl">
@@ -39,7 +39,7 @@
         <parameter id="6c2b6afe-df51-1004-84b6-42360e02a5cd" name="inputTemplate">
             <currentType value="String"/>
             <data>
-                <dataobject type="String">&lt;h1&gt;WHat the hell&lt;/h1&gt;</dataobject>
+                <dataobject type="String">&lt;p id="displayName"&gt; &lt;p&gt;Display Name:&lt;/p&gt; Default &lt;/p&gt; &lt;p&gt;Company Id:&lt;/p&gt; &lt;p id="companyId"&gt; Default &lt;/p&gt; &lt;script&gt; $(document).ready(function() { var scope = angular.element($(".ng-scope")[0]).scope(); var displayName = scope.userData.displayName; var companyId = scope.userData.companyId; $('#displayName').text(displayName); $('#companyId').text(companyId); }); &lt;/script&gt;</dataobject>
             </data>
         </parameter>
     </parameters>
@@ -67,8 +67,8 @@
         <view name="Interface Causality View">
             <filter id="INPUTS_FILTER" name="Inputs">
                 <parameters>
-                    <parameter name="VPCUrl" idRef="6c2b6a6b-df51-1004-84b6-42360e02a5cd"/>
                     <parameter name="inputTemplate" idRef="6c2b6afe-df51-1004-84b6-42360e02a5cd"/>
+                    <parameter name="VPCUrl" idRef="6c2b6a6b-df51-1004-84b6-42360e02a5cd"/>
                 </parameters>
             </filter>
             <filter id="OUTPUTS_FILTER" name="Outputs">
