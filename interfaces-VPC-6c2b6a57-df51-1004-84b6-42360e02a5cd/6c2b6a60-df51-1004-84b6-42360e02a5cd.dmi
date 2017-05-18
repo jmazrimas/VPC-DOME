@@ -6,12 +6,6 @@
         <defaultinterface/>
     </interfaceinfo>
     <parameters>
-        <parameter id="6c2b6a6d-df51-1004-84b6-42360e02a5cd" name="FileLocation">
-            <currentType value="String"/>
-            <data>
-                <dataobject type="String">https://cdn.dribbble.com/users/815278/screenshots/2375130/random-turtle.gif</dataobject>
-            </data>
-        </parameter>
         <parameter id="6c2b6afd-df51-1004-84b6-42360e02a5cd" name="inputTemplate">
             <currentType value="String"/>
             <data>
@@ -54,10 +48,16 @@
                 <dataobject type="String"></dataobject>
             </data>
         </parameter>
-        <parameter id="6c2b6a6e-df51-1004-84b6-42360e02a5cd" name="FileLocation">
+        <parameter id="fbfdf096-df51-1004-86d2-7ac963ddea2f" name="outputs">
             <currentType value="String"/>
             <data>
-                <dataobject type="String">https://cdn.dribbble.com/users/815278/screenshots/2375130/random-turtle.gif</dataobject>
+                <dataobject type="String"></dataobject>
+            </data>
+        </parameter>
+        <parameter id="fbfdf099-df51-1004-86d2-7ac963ddea2f" name="outputTemplate">
+            <currentType value="String"/>
+            <data>
+                <dataobject type="String">&lt;p&gt;Inputs were:&lt;/p&gt;&lt;p&gt;{{outputs}}&lt;/p&gt;</dataobject>
             </data>
         </parameter>
         <parameter id="6c2b6afe-df51-1004-84b6-42360e02a5cd" name="inputTemplate">
@@ -102,13 +102,24 @@
                 <dataobject type="String"></dataobject>
             </data>
         </parameter>
+        <parameter id="fbfdf097-df51-1004-86d2-7ac963ddea2f" name="outputs">
+            <currentType value="String"/>
+            <data>
+                <dataobject type="String"></dataobject>
+            </data>
+        </parameter>
+        <parameter id="fbfdf09a-df51-1004-86d2-7ac963ddea2f" name="outputTemplate">
+            <currentType value="String"/>
+            <data>
+                <dataobject type="String">&lt;p&gt;Inputs were:&lt;/p&gt;&lt;p&gt;{{outputs}}&lt;/p&gt;</dataobject>
+            </data>
+        </parameter>
     </parameters>
     <visualizations/>
     <relations/>
     <contexts>
         <context id="IFACE_MODEL_CXT" name="Model View">
             <modelobjects>
-                <parameter name="FileLocation" idRef="6c2b6a6d-df51-1004-84b6-42360e02a5cd"/>
                 <parameter name="inputTemplate" idRef="6c2b6afd-df51-1004-84b6-42360e02a5cd"/>
                 <parameter name="displayName" idRef="6c2b6b9c-df51-1004-84b6-42360e02a5cd"/>
                 <parameter name="companyId" idRef="6c2b6b9f-df51-1004-84b6-42360e02a5cd"/>
@@ -116,6 +127,8 @@
                 <parameter name="expireDate" idRef="6c2b6ba5-df51-1004-84b6-42360e02a5cd"/>
                 <parameter name="email" idRef="6c2b6ba8-df51-1004-84b6-42360e02a5cd"/>
                 <parameter name="authToken" idRef="6c2b6bab-df51-1004-84b6-42360e02a5cd"/>
+                <parameter name="outputs" idRef="fbfdf096-df51-1004-86d2-7ac963ddea2f"/>
+                <parameter name="outputTemplate" idRef="fbfdf099-df51-1004-86d2-7ac963ddea2f"/>
             </modelobjects>
         </context>
     </contexts>
@@ -123,7 +136,6 @@
         <view name="Build View">
             <context id="IFACE_BUILD_CXT" name="Build View">
                 <modelobjects>
-                    <parameter name="FileLocation" idRef="6c2b6a6e-df51-1004-84b6-42360e02a5cd"/>
                     <parameter name="inputTemplate" idRef="6c2b6afe-df51-1004-84b6-42360e02a5cd"/>
                     <parameter name="displayName" idRef="6c2b6b9d-df51-1004-84b6-42360e02a5cd"/>
                     <parameter name="companyId" idRef="6c2b6ba0-df51-1004-84b6-42360e02a5cd"/>
@@ -131,24 +143,27 @@
                     <parameter name="expireDate" idRef="6c2b6ba6-df51-1004-84b6-42360e02a5cd"/>
                     <parameter name="email" idRef="6c2b6ba9-df51-1004-84b6-42360e02a5cd"/>
                     <parameter name="authToken" idRef="6c2b6bac-df51-1004-84b6-42360e02a5cd"/>
+                    <parameter name="outputs" idRef="fbfdf097-df51-1004-86d2-7ac963ddea2f"/>
+                    <parameter name="outputTemplate" idRef="fbfdf09a-df51-1004-86d2-7ac963ddea2f"/>
                 </modelobjects>
             </context>
         </view>
         <view name="Interface Causality View">
             <filter id="INPUTS_FILTER" name="Inputs">
                 <parameters>
-                    <parameter name="companyId" idRef="6c2b6ba0-df51-1004-84b6-42360e02a5cd"/>
-                    <parameter name="email" idRef="6c2b6ba9-df51-1004-84b6-42360e02a5cd"/>
                     <parameter name="expireDate" idRef="6c2b6ba6-df51-1004-84b6-42360e02a5cd"/>
-                    <parameter name="authToken" idRef="6c2b6bac-df51-1004-84b6-42360e02a5cd"/>
                     <parameter name="inputTemplate" idRef="6c2b6afe-df51-1004-84b6-42360e02a5cd"/>
+                    <parameter name="email" idRef="6c2b6ba9-df51-1004-84b6-42360e02a5cd"/>
                     <parameter name="contactInfo" idRef="6c2b6ba3-df51-1004-84b6-42360e02a5cd"/>
+                    <parameter name="companyId" idRef="6c2b6ba0-df51-1004-84b6-42360e02a5cd"/>
+                    <parameter name="authToken" idRef="6c2b6bac-df51-1004-84b6-42360e02a5cd"/>
                     <parameter name="displayName" idRef="6c2b6b9d-df51-1004-84b6-42360e02a5cd"/>
                 </parameters>
             </filter>
             <filter id="OUTPUTS_FILTER" name="Outputs">
                 <parameters>
-                    <parameter name="FileLocation" idRef="6c2b6a6e-df51-1004-84b6-42360e02a5cd" causality="Result"/>
+                    <parameter name="outputs" idRef="fbfdf097-df51-1004-86d2-7ac963ddea2f" causality="Result"/>
+                    <parameter name="outputTemplate" idRef="fbfdf09a-df51-1004-86d2-7ac963ddea2f" causality="Result"/>
                 </parameters>
             </filter>
             <filter id="INDETERMINATES_FILTER" name="Indeterminates"/>
@@ -156,7 +171,6 @@
     </views>
     <directedGraph id="6c2b6a60-df51-1004-84b6-42360e02a5cd">
         <nodes>
-            <node idRef="6c2b6a6e-df51-1004-84b6-42360e02a5cd"/>
             <node idRef="6c2b6afe-df51-1004-84b6-42360e02a5cd"/>
             <node idRef="6c2b6b9d-df51-1004-84b6-42360e02a5cd"/>
             <node idRef="6c2b6ba0-df51-1004-84b6-42360e02a5cd"/>
@@ -164,33 +178,37 @@
             <node idRef="6c2b6ba6-df51-1004-84b6-42360e02a5cd"/>
             <node idRef="6c2b6ba9-df51-1004-84b6-42360e02a5cd"/>
             <node idRef="6c2b6bac-df51-1004-84b6-42360e02a5cd"/>
+            <node idRef="fbfdf097-df51-1004-86d2-7ac963ddea2f"/>
+            <node idRef="fbfdf09a-df51-1004-86d2-7ac963ddea2f"/>
         </nodes>
         <arcs>
-            <from idRef="6c2b6afe-df51-1004-84b6-42360e02a5cd">
-                <to idRef="6c2b6a6e-df51-1004-84b6-42360e02a5cd"/>
-            </from>
             <from idRef="6c2b6b9d-df51-1004-84b6-42360e02a5cd">
-                <to idRef="6c2b6a6e-df51-1004-84b6-42360e02a5cd"/>
+                <to idRef="fbfdf097-df51-1004-86d2-7ac963ddea2f"/>
+                <to idRef="fbfdf09a-df51-1004-86d2-7ac963ddea2f"/>
             </from>
             <from idRef="6c2b6ba0-df51-1004-84b6-42360e02a5cd">
-                <to idRef="6c2b6a6e-df51-1004-84b6-42360e02a5cd"/>
+                <to idRef="fbfdf097-df51-1004-86d2-7ac963ddea2f"/>
+                <to idRef="fbfdf09a-df51-1004-86d2-7ac963ddea2f"/>
             </from>
             <from idRef="6c2b6ba3-df51-1004-84b6-42360e02a5cd">
-                <to idRef="6c2b6a6e-df51-1004-84b6-42360e02a5cd"/>
+                <to idRef="fbfdf097-df51-1004-86d2-7ac963ddea2f"/>
+                <to idRef="fbfdf09a-df51-1004-86d2-7ac963ddea2f"/>
             </from>
             <from idRef="6c2b6ba6-df51-1004-84b6-42360e02a5cd">
-                <to idRef="6c2b6a6e-df51-1004-84b6-42360e02a5cd"/>
+                <to idRef="fbfdf097-df51-1004-86d2-7ac963ddea2f"/>
+                <to idRef="fbfdf09a-df51-1004-86d2-7ac963ddea2f"/>
             </from>
             <from idRef="6c2b6ba9-df51-1004-84b6-42360e02a5cd">
-                <to idRef="6c2b6a6e-df51-1004-84b6-42360e02a5cd"/>
+                <to idRef="fbfdf097-df51-1004-86d2-7ac963ddea2f"/>
+                <to idRef="fbfdf09a-df51-1004-86d2-7ac963ddea2f"/>
             </from>
             <from idRef="6c2b6bac-df51-1004-84b6-42360e02a5cd">
-                <to idRef="6c2b6a6e-df51-1004-84b6-42360e02a5cd"/>
+                <to idRef="fbfdf097-df51-1004-86d2-7ac963ddea2f"/>
+                <to idRef="fbfdf09a-df51-1004-86d2-7ac963ddea2f"/>
             </from>
         </arcs>
     </directedGraph>
     <interfaceToRelParamMap>
-        <iToRpMap relParamId="6c2b6a6e-df51-1004-84b6-42360e02a5cd" ifaceId="6c2b6a6c-df51-1004-84b6-42360e02a5cd"/>
         <iToRpMap relParamId="6c2b6afe-df51-1004-84b6-42360e02a5cd" ifaceId="6c2b6afc-df51-1004-84b6-42360e02a5cd"/>
         <iToRpMap relParamId="6c2b6b9d-df51-1004-84b6-42360e02a5cd" ifaceId="6c2b6b9b-df51-1004-84b6-42360e02a5cd"/>
         <iToRpMap relParamId="6c2b6ba0-df51-1004-84b6-42360e02a5cd" ifaceId="6c2b6b9e-df51-1004-84b6-42360e02a5cd"/>
@@ -198,5 +216,7 @@
         <iToRpMap relParamId="6c2b6ba6-df51-1004-84b6-42360e02a5cd" ifaceId="6c2b6ba4-df51-1004-84b6-42360e02a5cd"/>
         <iToRpMap relParamId="6c2b6ba9-df51-1004-84b6-42360e02a5cd" ifaceId="6c2b6ba7-df51-1004-84b6-42360e02a5cd"/>
         <iToRpMap relParamId="6c2b6bac-df51-1004-84b6-42360e02a5cd" ifaceId="6c2b6baa-df51-1004-84b6-42360e02a5cd"/>
+        <iToRpMap relParamId="fbfdf097-df51-1004-86d2-7ac963ddea2f" ifaceId="fbfdf095-df51-1004-86d2-7ac963ddea2f"/>
+        <iToRpMap relParamId="fbfdf09a-df51-1004-86d2-7ac963ddea2f" ifaceId="fbfdf098-df51-1004-86d2-7ac963ddea2f"/>
     </interfaceToRelParamMap>
 </modelinterface>
