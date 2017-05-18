@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<model type="PluginModel" id="6c2b6a57-df51-1004-84b6-42360e02a5cd" name="VPC" pluginType="NAME_VALUE">
+    <modelinfo>
+        <version>0.0.0</version>
+    </modelinfo>
+    <parameters>
+        <parameter id="6c2b6a69-df51-1004-84b6-42360e02a5cd" name="VPCUrl">
+            <currentType value="String"/>
+            <data>
+                <dataobject type="String"></dataobject>
+            </data>
+        </parameter>
+        <parameter id="6c2b6a6c-df51-1004-84b6-42360e02a5cd" name="FileLocation">
+            <currentType value="String"/>
+            <data>
+                <dataobject type="String">https://cdn.dribbble.com/users/815278/screenshots/2375130/random-turtle.gif</dataobject>
+            </data>
+        </parameter>
+        <parameter id="6c2b6afc-df51-1004-84b6-42360e02a5cd" name="inputTemplate">
+            <currentType value="String"/>
+            <data>
+                <dataobject type="String">&lt;h1&gt;WHat the hell&lt;/h1&gt;</dataobject>
+            </data>
+        </parameter>
+    </parameters>
+    <contexts>
+        <context id="BUILD_CXT" name="Build View">
+            <modelobjects>
+                <parameter name="VPCUrl" idRef="6c2b6a69-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
+                <parameter name="FileLocation" idRef="6c2b6a6c-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
+                <parameter name="inputTemplate" idRef="6c2b6afc-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
+            </modelobjects>
+        </context>
+        <context id="FILE_CXT" name="Files"/>
+    </contexts>
+    <mappings>
+        <modelMappings>
+            <mappedParameter name="VPCUrl" idRef="6c2b6a69-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">VPCUrl</mappedParameter>
+            <mappedParameter name="inputTemplate" idRef="6c2b6afc-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">inputTemplate</mappedParameter>
+            <mappedParameter name="FileLocation" idRef="6c2b6a6c-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">FileLocation</mappedParameter>
+        </modelMappings>
+    </mappings>
+    <dependencies>
+        <dependency idRef="6c2b6a6c-df51-1004-84b6-42360e02a5cd">
+            <parameter name="VPCUrl" idRef="6c2b6a69-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
+            <parameter name="inputTemplate" idRef="6c2b6afc-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
+        </dependency>
+    </dependencies>
+    <setup>
+        <parameter id="input file location" name="input file location">
+            <currentType value="File"/>
+            <data>
+                <dataobject type="File">
+                    <filePath>in.txt</filePath>
+                    <fileType>Binary</fileType>
+                </dataobject>
+            </data>
+        </parameter>
+        <parameter id="output file location" name="output file location">
+            <currentType value="File"/>
+            <data>
+                <dataobject type="File">
+                    <filePath>out.txt</filePath>
+                    <fileType>Binary</fileType>
+                </dataobject>
+            </data>
+        </parameter>
+        <parameter id="executable location" name="executable location">
+            <currentType value="File"/>
+            <data>
+                <dataobject type="File">
+                    <filePath></filePath>
+                    <fileType>Binary</fileType>
+                </dataobject>
+            </data>
+        </parameter>
+        <parameter id="command line arguments" name="command line arguments">
+            <currentType value="String"/>
+            <data>
+                <dataobject type="String"></dataobject>
+            </data>
+        </parameter>
+    </setup>
+    <auxfiles/>
+</model>
