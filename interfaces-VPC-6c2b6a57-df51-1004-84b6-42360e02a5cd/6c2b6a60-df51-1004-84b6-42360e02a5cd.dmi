@@ -151,19 +151,19 @@
         <view name="Interface Causality View">
             <filter id="INPUTS_FILTER" name="Inputs">
                 <parameters>
-                    <parameter name="authToken" idRef="6c2b6bac-df51-1004-84b6-42360e02a5cd"/>
+                    <parameter name="companyId" idRef="6c2b6ba0-df51-1004-84b6-42360e02a5cd"/>
+                    <parameter name="inputTemplate" idRef="6c2b6afe-df51-1004-84b6-42360e02a5cd"/>
+                    <parameter name="expireDate" idRef="6c2b6ba6-df51-1004-84b6-42360e02a5cd"/>
                     <parameter name="contactInfo" idRef="6c2b6ba3-df51-1004-84b6-42360e02a5cd"/>
                     <parameter name="displayName" idRef="6c2b6b9d-df51-1004-84b6-42360e02a5cd"/>
-                    <parameter name="expireDate" idRef="6c2b6ba6-df51-1004-84b6-42360e02a5cd"/>
-                    <parameter name="companyId" idRef="6c2b6ba0-df51-1004-84b6-42360e02a5cd"/>
+                    <parameter name="authToken" idRef="6c2b6bac-df51-1004-84b6-42360e02a5cd"/>
                     <parameter name="email" idRef="6c2b6ba9-df51-1004-84b6-42360e02a5cd"/>
-                    <parameter name="inputTemplate" idRef="6c2b6afe-df51-1004-84b6-42360e02a5cd"/>
                 </parameters>
             </filter>
             <filter id="OUTPUTS_FILTER" name="Outputs">
                 <parameters>
-                    <parameter name="outputTemplate" idRef="fbfdf09a-df51-1004-86d2-7ac963ddea2f" causality="Result"/>
                     <parameter name="outputs" idRef="fbfdf097-df51-1004-86d2-7ac963ddea2f" causality="Result"/>
+                    <parameter name="outputTemplate" idRef="fbfdf09a-df51-1004-86d2-7ac963ddea2f" causality="Result"/>
                 </parameters>
             </filter>
             <filter id="INDETERMINATES_FILTER" name="Indeterminates"/>
