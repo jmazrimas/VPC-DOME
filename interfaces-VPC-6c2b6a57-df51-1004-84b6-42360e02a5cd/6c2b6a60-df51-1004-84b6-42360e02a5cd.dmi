@@ -66,6 +66,12 @@
                 <dataobject type="String"></dataobject>
             </data>
         </parameter>
+        <parameter id="06b2473c-df5c-1004-86cf-cb5c2c05cddb" name="finalFileName">
+            <currentType value="String"/>
+            <data>
+                <dataobject type="String"></dataobject>
+            </data>
+        </parameter>
         <parameter id="6c2b6afe-df51-1004-84b6-42360e02a5cd" name="inputTemplate">
             <currentType value="String"/>
             <data>
@@ -126,6 +132,12 @@
                 <dataobject type="String"></dataobject>
             </data>
         </parameter>
+        <parameter id="06b2473d-df5c-1004-86cf-cb5c2c05cddb" name="finalFileName">
+            <currentType value="String"/>
+            <data>
+                <dataobject type="String"></dataobject>
+            </data>
+        </parameter>
     </parameters>
     <visualizations/>
     <relations/>
@@ -142,6 +154,7 @@
                 <parameter name="outputs" idRef="fbfdf096-df51-1004-86d2-7ac963ddea2f"/>
                 <parameter name="outputTemplate" idRef="fbfdf099-df51-1004-86d2-7ac963ddea2f"/>
                 <parameter name="companyName" idRef="95721086-df53-1004-853c-8207a9499fc7"/>
+                <parameter name="finalFileName" idRef="06b2473c-df5c-1004-86cf-cb5c2c05cddb"/>
             </modelobjects>
         </context>
     </contexts>
@@ -159,26 +172,28 @@
                     <parameter name="outputs" idRef="fbfdf097-df51-1004-86d2-7ac963ddea2f"/>
                     <parameter name="outputTemplate" idRef="fbfdf09a-df51-1004-86d2-7ac963ddea2f"/>
                     <parameter name="companyName" idRef="95721087-df53-1004-853c-8207a9499fc7"/>
+                    <parameter name="finalFileName" idRef="06b2473d-df5c-1004-86cf-cb5c2c05cddb"/>
                 </modelobjects>
             </context>
         </view>
         <view name="Interface Causality View">
             <filter id="INPUTS_FILTER" name="Inputs">
                 <parameters>
-                    <parameter name="displayName" idRef="6c2b6b9d-df51-1004-84b6-42360e02a5cd"/>
-                    <parameter name="companyId" idRef="6c2b6ba0-df51-1004-84b6-42360e02a5cd"/>
-                    <parameter name="authToken" idRef="6c2b6bac-df51-1004-84b6-42360e02a5cd"/>
                     <parameter name="expireDate" idRef="6c2b6ba6-df51-1004-84b6-42360e02a5cd"/>
-                    <parameter name="contactInfo" idRef="6c2b6ba3-df51-1004-84b6-42360e02a5cd"/>
-                    <parameter name="inputTemplate" idRef="6c2b6afe-df51-1004-84b6-42360e02a5cd"/>
-                    <parameter name="email" idRef="6c2b6ba9-df51-1004-84b6-42360e02a5cd"/>
+                    <parameter name="authToken" idRef="6c2b6bac-df51-1004-84b6-42360e02a5cd"/>
                     <parameter name="companyName" idRef="95721087-df53-1004-853c-8207a9499fc7"/>
+                    <parameter name="companyId" idRef="6c2b6ba0-df51-1004-84b6-42360e02a5cd"/>
+                    <parameter name="contactInfo" idRef="6c2b6ba3-df51-1004-84b6-42360e02a5cd"/>
+                    <parameter name="email" idRef="6c2b6ba9-df51-1004-84b6-42360e02a5cd"/>
+                    <parameter name="inputTemplate" idRef="6c2b6afe-df51-1004-84b6-42360e02a5cd"/>
+                    <parameter name="displayName" idRef="6c2b6b9d-df51-1004-84b6-42360e02a5cd"/>
                 </parameters>
             </filter>
             <filter id="OUTPUTS_FILTER" name="Outputs">
                 <parameters>
-                    <parameter name="outputTemplate" idRef="fbfdf09a-df51-1004-86d2-7ac963ddea2f" causality="Result"/>
                     <parameter name="outputs" idRef="fbfdf097-df51-1004-86d2-7ac963ddea2f" causality="Result"/>
+                    <parameter name="outputTemplate" idRef="fbfdf09a-df51-1004-86d2-7ac963ddea2f" causality="Result"/>
+                    <parameter name="finalFileName" idRef="06b2473d-df5c-1004-86cf-cb5c2c05cddb" causality="Result"/>
                 </parameters>
             </filter>
             <filter id="INDETERMINATES_FILTER" name="Indeterminates"/>
@@ -186,6 +201,7 @@
     </views>
     <directedGraph id="6c2b6a60-df51-1004-84b6-42360e02a5cd">
         <nodes>
+            <node idRef="06b2473d-df5c-1004-86cf-cb5c2c05cddb"/>
             <node idRef="6c2b6afe-df51-1004-84b6-42360e02a5cd"/>
             <node idRef="6c2b6b9d-df51-1004-84b6-42360e02a5cd"/>
             <node idRef="6c2b6ba0-df51-1004-84b6-42360e02a5cd"/>
@@ -199,40 +215,49 @@
         </nodes>
         <arcs>
             <from idRef="6c2b6afe-df51-1004-84b6-42360e02a5cd">
+                <to idRef="06b2473d-df5c-1004-86cf-cb5c2c05cddb"/>
                 <to idRef="fbfdf097-df51-1004-86d2-7ac963ddea2f"/>
                 <to idRef="fbfdf09a-df51-1004-86d2-7ac963ddea2f"/>
             </from>
             <from idRef="6c2b6b9d-df51-1004-84b6-42360e02a5cd">
+                <to idRef="06b2473d-df5c-1004-86cf-cb5c2c05cddb"/>
                 <to idRef="fbfdf097-df51-1004-86d2-7ac963ddea2f"/>
                 <to idRef="fbfdf09a-df51-1004-86d2-7ac963ddea2f"/>
             </from>
             <from idRef="6c2b6ba0-df51-1004-84b6-42360e02a5cd">
+                <to idRef="06b2473d-df5c-1004-86cf-cb5c2c05cddb"/>
                 <to idRef="fbfdf097-df51-1004-86d2-7ac963ddea2f"/>
                 <to idRef="fbfdf09a-df51-1004-86d2-7ac963ddea2f"/>
             </from>
             <from idRef="6c2b6ba3-df51-1004-84b6-42360e02a5cd">
+                <to idRef="06b2473d-df5c-1004-86cf-cb5c2c05cddb"/>
                 <to idRef="fbfdf097-df51-1004-86d2-7ac963ddea2f"/>
                 <to idRef="fbfdf09a-df51-1004-86d2-7ac963ddea2f"/>
             </from>
             <from idRef="6c2b6ba6-df51-1004-84b6-42360e02a5cd">
+                <to idRef="06b2473d-df5c-1004-86cf-cb5c2c05cddb"/>
                 <to idRef="fbfdf097-df51-1004-86d2-7ac963ddea2f"/>
                 <to idRef="fbfdf09a-df51-1004-86d2-7ac963ddea2f"/>
             </from>
             <from idRef="6c2b6ba9-df51-1004-84b6-42360e02a5cd">
+                <to idRef="06b2473d-df5c-1004-86cf-cb5c2c05cddb"/>
                 <to idRef="fbfdf097-df51-1004-86d2-7ac963ddea2f"/>
                 <to idRef="fbfdf09a-df51-1004-86d2-7ac963ddea2f"/>
             </from>
             <from idRef="6c2b6bac-df51-1004-84b6-42360e02a5cd">
+                <to idRef="06b2473d-df5c-1004-86cf-cb5c2c05cddb"/>
                 <to idRef="fbfdf097-df51-1004-86d2-7ac963ddea2f"/>
                 <to idRef="fbfdf09a-df51-1004-86d2-7ac963ddea2f"/>
             </from>
             <from idRef="95721087-df53-1004-853c-8207a9499fc7">
+                <to idRef="06b2473d-df5c-1004-86cf-cb5c2c05cddb"/>
                 <to idRef="fbfdf097-df51-1004-86d2-7ac963ddea2f"/>
                 <to idRef="fbfdf09a-df51-1004-86d2-7ac963ddea2f"/>
             </from>
         </arcs>
     </directedGraph>
     <interfaceToRelParamMap>
+        <iToRpMap relParamId="06b2473d-df5c-1004-86cf-cb5c2c05cddb" ifaceId="06b2473b-df5c-1004-86cf-cb5c2c05cddb"/>
         <iToRpMap relParamId="6c2b6afe-df51-1004-84b6-42360e02a5cd" ifaceId="6c2b6afc-df51-1004-84b6-42360e02a5cd"/>
         <iToRpMap relParamId="6c2b6b9d-df51-1004-84b6-42360e02a5cd" ifaceId="6c2b6b9b-df51-1004-84b6-42360e02a5cd"/>
         <iToRpMap relParamId="6c2b6ba0-df51-1004-84b6-42360e02a5cd" ifaceId="6c2b6b9e-df51-1004-84b6-42360e02a5cd"/>
