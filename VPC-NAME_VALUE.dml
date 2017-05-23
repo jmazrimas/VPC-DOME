@@ -194,6 +194,12 @@
                 </dataobject>
             </data>
         </parameter>
+        <parameter id="95721085-df53-1004-853c-8207a9499fc7" name="companyName">
+            <currentType value="String"/>
+            <data>
+                <dataobject type="String"></dataobject>
+            </data>
+        </parameter>
     </parameters>
     <contexts>
         <context id="BUILD_CXT" name="Build View">
@@ -207,6 +213,7 @@
                 <parameter name="expireDate" idRef="6c2b6ba4-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
                 <parameter name="outputs" idRef="fbfdf095-df51-1004-86d2-7ac963ddea2f" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
                 <parameter name="outputTemplate" idRef="fbfdf098-df51-1004-86d2-7ac963ddea2f" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
+                <parameter name="companyName" idRef="95721085-df53-1004-853c-8207a9499fc7" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
             </modelobjects>
         </context>
         <context id="FILE_CXT" name="Files">
@@ -231,14 +238,15 @@
     </contexts>
     <mappings>
         <modelMappings>
-            <mappedParameter name="displayName" idRef="6c2b6b9b-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">displayName</mappedParameter>
-            <mappedParameter name="authToken" idRef="6c2b6baa-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">authToken</mappedParameter>
-            <mappedParameter name="email" idRef="6c2b6ba7-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">email</mappedParameter>
-            <mappedParameter name="contactInfo" idRef="6c2b6ba1-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">contactInfo</mappedParameter>
             <mappedParameter name="outputTemplate" idRef="fbfdf098-df51-1004-86d2-7ac963ddea2f" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">outputTemplate</mappedParameter>
+            <mappedParameter name="companyName" idRef="95721085-df53-1004-853c-8207a9499fc7" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">companyName</mappedParameter>
+            <mappedParameter name="contactInfo" idRef="6c2b6ba1-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">contactInfo</mappedParameter>
             <mappedParameter name="outputs" idRef="fbfdf095-df51-1004-86d2-7ac963ddea2f" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">outputs</mappedParameter>
-            <mappedParameter name="inputTemplate" idRef="6c2b6afc-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">inputTemplate</mappedParameter>
+            <mappedParameter name="displayName" idRef="6c2b6b9b-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">displayName</mappedParameter>
+            <mappedParameter name="email" idRef="6c2b6ba7-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">email</mappedParameter>
             <mappedParameter name="companyId" idRef="6c2b6b9e-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">companyId</mappedParameter>
+            <mappedParameter name="authToken" idRef="6c2b6baa-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">authToken</mappedParameter>
+            <mappedParameter name="inputTemplate" idRef="6c2b6afc-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">inputTemplate</mappedParameter>
             <mappedParameter name="expireDate" idRef="6c2b6ba4-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">expireDate</mappedParameter>
         </modelMappings>
     </mappings>
@@ -251,6 +259,7 @@
             <parameter name="expireDate" idRef="6c2b6ba4-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
             <parameter name="email" idRef="6c2b6ba7-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
             <parameter name="authToken" idRef="6c2b6baa-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
+            <parameter name="companyName" idRef="95721085-df53-1004-853c-8207a9499fc7" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
         </dependency>
         <dependency idRef="fbfdf095-df51-1004-86d2-7ac963ddea2f">
             <parameter name="inputTemplate" idRef="6c2b6afc-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
@@ -260,6 +269,7 @@
             <parameter name="expireDate" idRef="6c2b6ba4-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
             <parameter name="email" idRef="6c2b6ba7-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
             <parameter name="authToken" idRef="6c2b6baa-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
+            <parameter name="companyName" idRef="95721085-df53-1004-853c-8207a9499fc7" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
         </dependency>
     </dependencies>
     <setup>
@@ -303,60 +313,6 @@
             <isExcuteOnServer value="true"/>
             <fileType>file:///</fileType>
             <file>/home/dmcdevelopment/14-01-10-PSU-cm/report.py</file>
-        </auxfile>
-        <auxfile id="95720e27-df53-1004-853c-8207a9499fc7" name="error-template-pt1">
-            <isMainModelFile value="false"/>
-            <isExcuteOnServer value="true"/>
-            <fileType>file:///</fileType>
-            <file>/home/dmcdevelopment/14-01-10-PSU-cm/report-templates/error-template-pt1.html</file>
-        </auxfile>
-        <auxfile id="95720e28-df53-1004-853c-8207a9499fc7" name="error-template-pt2">
-            <isMainModelFile value="false"/>
-            <isExcuteOnServer value="true"/>
-            <fileType>file:///</fileType>
-            <file>/home/dmcdevelopment/14-01-10-PSU-cm/report-templates/error-template-pt2.html</file>
-        </auxfile>
-        <auxfile id="95720e29-df53-1004-853c-8207a9499fc7" name="error-template">
-            <isMainModelFile value="false"/>
-            <isExcuteOnServer value="true"/>
-            <fileType>file:///</fileType>
-            <file>/home/dmcdevelopment/14-01-10-PSU-cm/report-templates/error-template.html</file>
-        </auxfile>
-        <auxfile id="95720e2a-df53-1004-853c-8207a9499fc7" name="report-template-pt1">
-            <isMainModelFile value="false"/>
-            <isExcuteOnServer value="true"/>
-            <fileType>file:///</fileType>
-            <file>/home/dmcdevelopment/14-01-10-PSU-cm/report-templates/report-template-pt1.html</file>
-        </auxfile>
-        <auxfile id="95720e2b-df53-1004-853c-8207a9499fc7" name="report-template-pt2">
-            <isMainModelFile value="false"/>
-            <isExcuteOnServer value="true"/>
-            <fileType>file:///</fileType>
-            <file>/home/dmcdevelopment/14-01-10-PSU-cm/report-templates/report-template-pt2.html</file>
-        </auxfile>
-        <auxfile id="95720e2c-df53-1004-853c-8207a9499fc7" name="report-template-pt3">
-            <isMainModelFile value="false"/>
-            <isExcuteOnServer value="true"/>
-            <fileType>file:///</fileType>
-            <file>/home/dmcdevelopment/14-01-10-PSU-cm/report-templates/report-template-pt3.html</file>
-        </auxfile>
-        <auxfile id="95720e2d-df53-1004-853c-8207a9499fc7" name="report-template-pt4">
-            <isMainModelFile value="false"/>
-            <isExcuteOnServer value="true"/>
-            <fileType>file:///</fileType>
-            <file>/home/dmcdevelopment/14-01-10-PSU-cm/report-templates/report-template-pt4.html</file>
-        </auxfile>
-        <auxfile id="95720e2e-df53-1004-853c-8207a9499fc7" name="report-template-pt5">
-            <isMainModelFile value="false"/>
-            <isExcuteOnServer value="true"/>
-            <fileType>file:///</fileType>
-            <file>/home/dmcdevelopment/14-01-10-PSU-cm/report-templates/report-template-pt5.html</file>
-        </auxfile>
-        <auxfile id="95720e2f-df53-1004-853c-8207a9499fc7" name="report-template">
-            <isMainModelFile value="false"/>
-            <isExcuteOnServer value="true"/>
-            <fileType>file:///</fileType>
-            <file>/home/dmcdevelopment/14-01-10-PSU-cm/report-templates/report-template.html</file>
         </auxfile>
         <auxfile id="95720e30-df53-1004-853c-8207a9499fc7" name="reportcss">
             <isMainModelFile value="false"/>
