@@ -179,20 +179,20 @@
         <view name="Interface Causality View">
             <filter id="INPUTS_FILTER" name="Inputs">
                 <parameters>
-                    <parameter name="expireDate" idRef="6c2b6ba6-df51-1004-84b6-42360e02a5cd"/>
-                    <parameter name="authToken" idRef="6c2b6bac-df51-1004-84b6-42360e02a5cd"/>
                     <parameter name="companyName" idRef="95721087-df53-1004-853c-8207a9499fc7"/>
-                    <parameter name="companyId" idRef="6c2b6ba0-df51-1004-84b6-42360e02a5cd"/>
                     <parameter name="contactInfo" idRef="6c2b6ba3-df51-1004-84b6-42360e02a5cd"/>
-                    <parameter name="email" idRef="6c2b6ba9-df51-1004-84b6-42360e02a5cd"/>
+                    <parameter name="expireDate" idRef="6c2b6ba6-df51-1004-84b6-42360e02a5cd"/>
                     <parameter name="inputTemplate" idRef="6c2b6afe-df51-1004-84b6-42360e02a5cd"/>
+                    <parameter name="companyId" idRef="6c2b6ba0-df51-1004-84b6-42360e02a5cd"/>
+                    <parameter name="authToken" idRef="6c2b6bac-df51-1004-84b6-42360e02a5cd"/>
+                    <parameter name="email" idRef="6c2b6ba9-df51-1004-84b6-42360e02a5cd"/>
                     <parameter name="displayName" idRef="6c2b6b9d-df51-1004-84b6-42360e02a5cd"/>
+                    <parameter name="outputTemplate" idRef="fbfdf09a-df51-1004-86d2-7ac963ddea2f"/>
                 </parameters>
             </filter>
             <filter id="OUTPUTS_FILTER" name="Outputs">
                 <parameters>
                     <parameter name="outputs" idRef="fbfdf097-df51-1004-86d2-7ac963ddea2f" causality="Result"/>
-                    <parameter name="outputTemplate" idRef="fbfdf09a-df51-1004-86d2-7ac963ddea2f" causality="Result"/>
                     <parameter name="finalFileName" idRef="06b2473d-df5c-1004-86cf-cb5c2c05cddb" causality="Result"/>
                 </parameters>
             </filter>
@@ -217,42 +217,34 @@
             <from idRef="6c2b6afe-df51-1004-84b6-42360e02a5cd">
                 <to idRef="06b2473d-df5c-1004-86cf-cb5c2c05cddb"/>
                 <to idRef="fbfdf097-df51-1004-86d2-7ac963ddea2f"/>
-                <to idRef="fbfdf09a-df51-1004-86d2-7ac963ddea2f"/>
             </from>
             <from idRef="6c2b6b9d-df51-1004-84b6-42360e02a5cd">
                 <to idRef="06b2473d-df5c-1004-86cf-cb5c2c05cddb"/>
                 <to idRef="fbfdf097-df51-1004-86d2-7ac963ddea2f"/>
-                <to idRef="fbfdf09a-df51-1004-86d2-7ac963ddea2f"/>
             </from>
             <from idRef="6c2b6ba0-df51-1004-84b6-42360e02a5cd">
                 <to idRef="06b2473d-df5c-1004-86cf-cb5c2c05cddb"/>
                 <to idRef="fbfdf097-df51-1004-86d2-7ac963ddea2f"/>
-                <to idRef="fbfdf09a-df51-1004-86d2-7ac963ddea2f"/>
             </from>
             <from idRef="6c2b6ba3-df51-1004-84b6-42360e02a5cd">
                 <to idRef="06b2473d-df5c-1004-86cf-cb5c2c05cddb"/>
                 <to idRef="fbfdf097-df51-1004-86d2-7ac963ddea2f"/>
-                <to idRef="fbfdf09a-df51-1004-86d2-7ac963ddea2f"/>
             </from>
             <from idRef="6c2b6ba6-df51-1004-84b6-42360e02a5cd">
                 <to idRef="06b2473d-df5c-1004-86cf-cb5c2c05cddb"/>
                 <to idRef="fbfdf097-df51-1004-86d2-7ac963ddea2f"/>
-                <to idRef="fbfdf09a-df51-1004-86d2-7ac963ddea2f"/>
             </from>
             <from idRef="6c2b6ba9-df51-1004-84b6-42360e02a5cd">
                 <to idRef="06b2473d-df5c-1004-86cf-cb5c2c05cddb"/>
                 <to idRef="fbfdf097-df51-1004-86d2-7ac963ddea2f"/>
-                <to idRef="fbfdf09a-df51-1004-86d2-7ac963ddea2f"/>
             </from>
             <from idRef="6c2b6bac-df51-1004-84b6-42360e02a5cd">
                 <to idRef="06b2473d-df5c-1004-86cf-cb5c2c05cddb"/>
                 <to idRef="fbfdf097-df51-1004-86d2-7ac963ddea2f"/>
-                <to idRef="fbfdf09a-df51-1004-86d2-7ac963ddea2f"/>
             </from>
             <from idRef="95721087-df53-1004-853c-8207a9499fc7">
                 <to idRef="06b2473d-df5c-1004-86cf-cb5c2c05cddb"/>
                 <to idRef="fbfdf097-df51-1004-86d2-7ac963ddea2f"/>
-                <to idRef="fbfdf09a-df51-1004-86d2-7ac963ddea2f"/>
             </from>
         </arcs>
     </directedGraph>
