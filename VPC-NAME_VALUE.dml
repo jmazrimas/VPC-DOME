@@ -8,7 +8,7 @@
         <parameter id="6c2b6afc-df51-1004-84b6-42360e02a5cd" name="inputTemplate">
             <currentType value="String"/>
             <data>
-                <dataobject type="String">&lt;style&gt; #VPCstyle .layout-column { min-width: 500px; margin: 15px; padding: 15px; background: white; } &lt;/style&gt; &lt;div id="VPCstyle"&gt; &lt;h2&gt;VPC Tool&lt;/h2&gt; &lt;div layout="row" layout-wrap layout-align="center start"&gt; &lt;div layout="column"&gt; &lt;h3&gt;Hidden Inputs&lt;/h3&gt; &lt;md-input-container&gt; &lt;input id="displayName" type="text"&gt; &lt;/md-input-container&gt; &lt;md-input-container&gt; &lt;input id="companyId" type="text"&gt; &lt;/md-input-container&gt; &lt;md-input-container&gt; &lt;input id="companyName" type="text"&gt; &lt;/md-input-container&gt; &lt;md-input-container&gt; &lt;input id="email" type="text"&gt; &lt;/md-input-container&gt; &lt;/div&gt; &lt;div layout="column"&gt; &lt;h3&gt;User Inputs&lt;/h3&gt; &lt;md-input-container&gt; &lt;label&gt;Auth Token&lt;/label&gt; &lt;input id="authToken" type="text"&gt; &lt;/md-input-container&gt; &lt;md-input-container&gt; &lt;label&gt;Contact Info (Email)&lt;/label&gt; &lt;input id="contactInfo" type="text"&gt; &lt;/md-input-container&gt; &lt;md-input-container&gt; &lt;label&gt;Expiration Date&lt;/label&gt; &lt;input id="expireDate" type="date"&gt; &lt;/md-input-container&gt; &lt;/div&gt; &lt;/div&gt; &lt;button ng-click='run()'&gt;RUN&lt;/button&gt; &lt;/div&gt; &lt;script&gt; $(document).ready(function() { var scope = angular.element($(".ng-scope")[0]).scope(); var userData = scope.userData; var displayName = userData.displayName; var companyId = userData.companyId; var email = userData.email; var companyName = userData.companyName; $('#displayName').val(displayName); $('#companyId').val(companyId); $('#email').val(email); $('#companyName').val(companyName); }); &lt;/script&gt;</dataobject>
+                <dataobject type="String">&lt;style&gt; #VPCstyle .layout-column { min-width: 500px; margin: 15px; padding: 15px; background: white; height: 100%; } &lt;/style&gt; &lt;div class="project-run-services padding-10" ng-if="!runHistory" ng-show="hasCustomUI &amp;&amp; service.interfaceModel.inParams.inputFile" layout="column"&gt; &lt;div id="VPCstyle"&gt; &lt;div layout="row" layout-wrap layout-align="center start"&gt; &lt;div layout="column" ng-hide="true"&gt; &lt;md-input-container&gt; &lt;input id="displayName" type="text"&gt; &lt;/md-input-container&gt; &lt;md-input-container&gt; &lt;input id="companyId" type="text"&gt; &lt;/md-input-container&gt; &lt;md-input-container&gt; &lt;input id="companyName" type="text"&gt; &lt;/md-input-container&gt; &lt;md-input-container&gt; &lt;input id="email" type="text"&gt; &lt;/md-input-container&gt; &lt;/div&gt; &lt;div layout="column" flex&gt; &lt;h3&gt;Other Inputs:&lt;/h3&gt; &lt;md-input-container&gt; &lt;label&gt;Auth Token&lt;/label&gt; &lt;input id="authToken" type="text"&gt; &lt;/md-input-container&gt; &lt;md-input-container&gt; &lt;label&gt;Contact Info (Email)&lt;/label&gt; &lt;input id="contactInfo" type="text"&gt; &lt;/md-input-container&gt; &lt;md-input-container&gt; &lt;label&gt;Expiration Date&lt;/label&gt; &lt;input id="expireDate" type="date"&gt; &lt;/md-input-container&gt; &lt;md-input-container&gt; &lt;input id="inputFile" type="text"&gt; &lt;/md-input-container&gt; &lt;/div&gt; &lt;/div&gt; &lt;button class="md-raised md-primary md-button md-default-theme right" ng-click='run()'&gt;RUN&lt;/button&gt; &lt;/div&gt; &lt;/div&gt; &lt;script&gt; $(document).ready(function() { var scope = angular.element($(".ng-scope")[0]).scope(); var userData = scope.userData; var displayName = userData.displayName; var companyId = userData.companyId; var email = userData.email; var companyName = userData.companyName; $('#displayName').val(displayName); $('#companyId').val(companyId); $('#email').val(email); $('#companyName').val(companyName); }); &lt;/script&gt;</dataobject>
             </data>
         </parameter>
         <parameter id="6c2b6b9b-df51-1004-84b6-42360e02a5cd" name="displayName">
@@ -54,18 +54,6 @@
                     <filePath>/home/dmcdevelopment/VPC/runApp.py</filePath>
                     <fileType>Binary</fileType>
                 </dataobject>
-            </data>
-        </parameter>
-        <parameter id="fbfdf095-df51-1004-86d2-7ac963ddea2f" name="outputs">
-            <currentType value="String"/>
-            <data>
-                <dataobject type="String"></dataobject>
-            </data>
-        </parameter>
-        <parameter id="fbfdf098-df51-1004-86d2-7ac963ddea2f" name="outputTemplate">
-            <currentType value="String"/>
-            <data>
-                <dataobject type="String">&lt;p&gt;Inputs were:&lt;/p&gt;&lt;p&gt;{{outputs}}&lt;/p&gt;</dataobject>
             </data>
         </parameter>
         <parameter id="95720e1d-df53-1004-853c-8207a9499fc7" name="error-template-pt1">
@@ -209,10 +197,31 @@
                 </dataobject>
             </data>
         </parameter>
-        <parameter id="06b2473b-df5c-1004-86cf-cb5c2c05cddb" name="finalFileName">
+        <parameter id="06b2473b-df5c-1004-86cf-cb5c2c05cddb" name="outputFile">
             <currentType value="String"/>
             <data>
                 <dataobject type="String"></dataobject>
+            </data>
+        </parameter>
+        <parameter id="06b2478a-df5c-1004-86cf-cb5c2c05cddb" name="outputTemplate">
+            <currentType value="String"/>
+            <data>
+                <dataobject type="String"></dataobject>
+            </data>
+        </parameter>
+        <parameter id="06b247a6-df5c-1004-86cf-cb5c2c05cddb" name="inputFile">
+            <currentType value="String"/>
+            <data>
+                <dataobject type="String"></dataobject>
+            </data>
+        </parameter>
+        <parameter id="06b24855-df5c-1004-86cf-cb5c2c05cddb" name="filemanagement">
+            <currentType value="File"/>
+            <data>
+                <dataobject type="File">
+                    <filePath>/home/dmcdevelopment/14-01-10-PSU-cm/filemanagement.py</filePath>
+                    <fileType>Binary</fileType>
+                </dataobject>
             </data>
         </parameter>
     </parameters>
@@ -226,10 +235,10 @@
                 <parameter name="authToken" idRef="6c2b6baa-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
                 <parameter name="contactInfo" idRef="6c2b6ba1-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
                 <parameter name="expireDate" idRef="6c2b6ba4-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
-                <parameter name="outputs" idRef="fbfdf095-df51-1004-86d2-7ac963ddea2f" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
-                <parameter name="outputTemplate" idRef="fbfdf098-df51-1004-86d2-7ac963ddea2f" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
                 <parameter name="companyName" idRef="95721085-df53-1004-853c-8207a9499fc7" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
-                <parameter name="finalFileName" idRef="06b2473b-df5c-1004-86cf-cb5c2c05cddb" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
+                <parameter name="outputFile" idRef="06b2473b-df5c-1004-86cf-cb5c2c05cddb" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
+                <parameter name="outputTemplate" idRef="06b2478a-df5c-1004-86cf-cb5c2c05cddb" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
+                <parameter name="inputFile" idRef="06b247a6-df5c-1004-86cf-cb5c2c05cddb" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
             </modelobjects>
         </context>
         <context id="FILE_CXT" name="Files">
@@ -250,35 +259,26 @@
                 <parameter name="pml" idRef="95720e97-df53-1004-853c-8207a9499fc7" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
                 <parameter name="report-templates" idRef="95720f9f-df53-1004-853c-8207a9499fc7" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
                 <parameter name="credentials" idRef="06b2473a-df5c-1004-86cf-cb5c2c05cddb" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
+                <parameter name="filemanagement" idRef="06b24855-df5c-1004-86cf-cb5c2c05cddb" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
             </modelobjects>
         </context>
     </contexts>
     <mappings>
         <modelMappings>
-            <mappedParameter name="outputs" idRef="fbfdf095-df51-1004-86d2-7ac963ddea2f" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">outputs</mappedParameter>
-            <mappedParameter name="displayName" idRef="6c2b6b9b-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">displayName</mappedParameter>
-            <mappedParameter name="companyId" idRef="6c2b6b9e-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">companyId</mappedParameter>
-            <mappedParameter name="outputTemplate" idRef="fbfdf098-df51-1004-86d2-7ac963ddea2f" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">outputTemplate</mappedParameter>
-            <mappedParameter name="companyName" idRef="95721085-df53-1004-853c-8207a9499fc7" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">companyName</mappedParameter>
+            <mappedParameter name="inputFile" idRef="06b247a6-df5c-1004-86cf-cb5c2c05cddb" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">inputFile</mappedParameter>
             <mappedParameter name="contactInfo" idRef="6c2b6ba1-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">contactInfo</mappedParameter>
-            <mappedParameter name="authToken" idRef="6c2b6baa-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">authToken</mappedParameter>
-            <mappedParameter name="inputTemplate" idRef="6c2b6afc-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">inputTemplate</mappedParameter>
-            <mappedParameter name="finalFileName" idRef="06b2473b-df5c-1004-86cf-cb5c2c05cddb" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">finalFileName</mappedParameter>
-            <mappedParameter name="email" idRef="6c2b6ba7-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">email</mappedParameter>
             <mappedParameter name="expireDate" idRef="6c2b6ba4-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">expireDate</mappedParameter>
+            <mappedParameter name="companyId" idRef="6c2b6b9e-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">companyId</mappedParameter>
+            <mappedParameter name="inputTemplate" idRef="6c2b6afc-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">inputTemplate</mappedParameter>
+            <mappedParameter name="email" idRef="6c2b6ba7-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">email</mappedParameter>
+            <mappedParameter name="companyName" idRef="95721085-df53-1004-853c-8207a9499fc7" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">companyName</mappedParameter>
+            <mappedParameter name="authToken" idRef="6c2b6baa-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">authToken</mappedParameter>
+            <mappedParameter name="outputFile" idRef="06b2473b-df5c-1004-86cf-cb5c2c05cddb" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">outputFile</mappedParameter>
+            <mappedParameter name="displayName" idRef="6c2b6b9b-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">displayName</mappedParameter>
+            <mappedParameter name="outputTemplate" idRef="06b2478a-df5c-1004-86cf-cb5c2c05cddb" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd">outputTemplate</mappedParameter>
         </modelMappings>
     </mappings>
     <dependencies>
-        <dependency idRef="fbfdf095-df51-1004-86d2-7ac963ddea2f">
-            <parameter name="inputTemplate" idRef="6c2b6afc-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
-            <parameter name="displayName" idRef="6c2b6b9b-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
-            <parameter name="companyId" idRef="6c2b6b9e-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
-            <parameter name="contactInfo" idRef="6c2b6ba1-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
-            <parameter name="expireDate" idRef="6c2b6ba4-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
-            <parameter name="email" idRef="6c2b6ba7-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
-            <parameter name="authToken" idRef="6c2b6baa-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
-            <parameter name="companyName" idRef="95721085-df53-1004-853c-8207a9499fc7" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
-        </dependency>
         <dependency idRef="06b2473b-df5c-1004-86cf-cb5c2c05cddb">
             <parameter name="inputTemplate" idRef="6c2b6afc-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
             <parameter name="displayName" idRef="6c2b6b9b-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
@@ -288,6 +288,18 @@
             <parameter name="email" idRef="6c2b6ba7-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
             <parameter name="authToken" idRef="6c2b6baa-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
             <parameter name="companyName" idRef="95721085-df53-1004-853c-8207a9499fc7" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
+            <parameter name="inputFile" idRef="06b247a6-df5c-1004-86cf-cb5c2c05cddb" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
+        </dependency>
+        <dependency idRef="06b2478a-df5c-1004-86cf-cb5c2c05cddb">
+            <parameter name="inputTemplate" idRef="6c2b6afc-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
+            <parameter name="displayName" idRef="6c2b6b9b-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
+            <parameter name="companyId" idRef="6c2b6b9e-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
+            <parameter name="contactInfo" idRef="6c2b6ba1-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
+            <parameter name="expireDate" idRef="6c2b6ba4-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
+            <parameter name="email" idRef="6c2b6ba7-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
+            <parameter name="authToken" idRef="6c2b6baa-df51-1004-84b6-42360e02a5cd" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
+            <parameter name="companyName" idRef="95721085-df53-1004-853c-8207a9499fc7" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
+            <parameter name="inputFile" idRef="06b247a6-df5c-1004-86cf-cb5c2c05cddb" idModelRef="6c2b6a57-df51-1004-84b6-42360e02a5cd"/>
         </dependency>
     </dependencies>
     <setup>
@@ -367,6 +379,12 @@
             <isExcuteOnServer value="true"/>
             <fileType>file:///</fileType>
             <file>/home/dmcdevelopment/14-01-10-PSU-cm/credentials.json</file>
+        </auxfile>
+        <auxfile id="06b24856-df5c-1004-86cf-cb5c2c05cddb" name="filemanagement">
+            <isMainModelFile value="false"/>
+            <isExcuteOnServer value="true"/>
+            <fileType>file:///</fileType>
+            <file>/home/dmcdevelopment/14-01-10-PSU-cm/filemanagement.py</file>
         </auxfile>
     </auxfiles>
 </model>

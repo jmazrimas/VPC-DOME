@@ -9,7 +9,7 @@
         <parameter id="6c2b6afd-df51-1004-84b6-42360e02a5cd" name="inputTemplate">
             <currentType value="String"/>
             <data>
-                <dataobject type="String">&lt;style&gt; #VPCstyle .layout-column { min-width: 500px; margin: 15px; padding: 15px; background: white; } &lt;/style&gt; &lt;div id="VPCstyle"&gt; &lt;h2&gt;VPC Tool&lt;/h2&gt; &lt;div layout="row" layout-wrap layout-align="center start"&gt; &lt;div layout="column"&gt; &lt;h3&gt;Hidden Inputs&lt;/h3&gt; &lt;md-input-container&gt; &lt;input id="displayName" type="text"&gt; &lt;/md-input-container&gt; &lt;md-input-container&gt; &lt;input id="companyId" type="text"&gt; &lt;/md-input-container&gt; &lt;md-input-container&gt; &lt;input id="companyName" type="text"&gt; &lt;/md-input-container&gt; &lt;md-input-container&gt; &lt;input id="email" type="text"&gt; &lt;/md-input-container&gt; &lt;/div&gt; &lt;div layout="column"&gt; &lt;h3&gt;User Inputs&lt;/h3&gt; &lt;md-input-container&gt; &lt;label&gt;Auth Token&lt;/label&gt; &lt;input id="authToken" type="text"&gt; &lt;/md-input-container&gt; &lt;md-input-container&gt; &lt;label&gt;Contact Info (Email)&lt;/label&gt; &lt;input id="contactInfo" type="text"&gt; &lt;/md-input-container&gt; &lt;md-input-container&gt; &lt;label&gt;Expiration Date&lt;/label&gt; &lt;input id="expireDate" type="date"&gt; &lt;/md-input-container&gt; &lt;/div&gt; &lt;/div&gt; &lt;button ng-click='run()'&gt;RUN&lt;/button&gt; &lt;/div&gt; &lt;script&gt; $(document).ready(function() { var scope = angular.element($(".ng-scope")[0]).scope(); var userData = scope.userData; var displayName = userData.displayName; var companyId = userData.companyId; var email = userData.email; var companyName = userData.companyName; $('#displayName').val(displayName); $('#companyId').val(companyId); $('#email').val(email); $('#companyName').val(companyName); }); &lt;/script&gt;</dataobject>
+                <dataobject type="String">&lt;style&gt; #VPCstyle .layout-column { min-width: 500px; margin: 15px; padding: 15px; background: white; height: 100%; } &lt;/style&gt; &lt;div class="project-run-services padding-10" ng-if="!runHistory" ng-show="hasCustomUI &amp;&amp; service.interfaceModel.inParams.inputFile" layout="column"&gt; &lt;div id="VPCstyle"&gt; &lt;div layout="row" layout-wrap layout-align="center start"&gt; &lt;div layout="column" ng-hide="true"&gt; &lt;md-input-container&gt; &lt;input id="displayName" type="text"&gt; &lt;/md-input-container&gt; &lt;md-input-container&gt; &lt;input id="companyId" type="text"&gt; &lt;/md-input-container&gt; &lt;md-input-container&gt; &lt;input id="companyName" type="text"&gt; &lt;/md-input-container&gt; &lt;md-input-container&gt; &lt;input id="email" type="text"&gt; &lt;/md-input-container&gt; &lt;/div&gt; &lt;div layout="column" flex&gt; &lt;h3&gt;Other Inputs:&lt;/h3&gt; &lt;md-input-container&gt; &lt;label&gt;Auth Token&lt;/label&gt; &lt;input id="authToken" type="text"&gt; &lt;/md-input-container&gt; &lt;md-input-container&gt; &lt;label&gt;Contact Info (Email)&lt;/label&gt; &lt;input id="contactInfo" type="text"&gt; &lt;/md-input-container&gt; &lt;md-input-container&gt; &lt;label&gt;Expiration Date&lt;/label&gt; &lt;input id="expireDate" type="date"&gt; &lt;/md-input-container&gt; &lt;md-input-container&gt; &lt;input id="inputFile" type="text"&gt; &lt;/md-input-container&gt; &lt;/div&gt; &lt;/div&gt; &lt;button class="md-raised md-primary md-button md-default-theme right" ng-click='run()'&gt;RUN&lt;/button&gt; &lt;/div&gt; &lt;/div&gt; &lt;script&gt; $(document).ready(function() { var scope = angular.element($(".ng-scope")[0]).scope(); var userData = scope.userData; var displayName = userData.displayName; var companyId = userData.companyId; var email = userData.email; var companyName = userData.companyName; $('#displayName').val(displayName); $('#companyId').val(companyId); $('#email').val(email); $('#companyName').val(companyName); }); &lt;/script&gt;</dataobject>
             </data>
         </parameter>
         <parameter id="6c2b6b9c-df51-1004-84b6-42360e02a5cd" name="displayName">
@@ -48,25 +48,25 @@
                 <dataobject type="String"></dataobject>
             </data>
         </parameter>
-        <parameter id="fbfdf096-df51-1004-86d2-7ac963ddea2f" name="outputs">
-            <currentType value="String"/>
-            <data>
-                <dataobject type="String"></dataobject>
-            </data>
-        </parameter>
-        <parameter id="fbfdf099-df51-1004-86d2-7ac963ddea2f" name="outputTemplate">
-            <currentType value="String"/>
-            <data>
-                <dataobject type="String">&lt;p&gt;Inputs were:&lt;/p&gt;&lt;p&gt;{{outputs}}&lt;/p&gt;</dataobject>
-            </data>
-        </parameter>
         <parameter id="95721086-df53-1004-853c-8207a9499fc7" name="companyName">
             <currentType value="String"/>
             <data>
                 <dataobject type="String"></dataobject>
             </data>
         </parameter>
-        <parameter id="06b2473c-df5c-1004-86cf-cb5c2c05cddb" name="finalFileName">
+        <parameter id="06b2473c-df5c-1004-86cf-cb5c2c05cddb" name="outputFile">
+            <currentType value="String"/>
+            <data>
+                <dataobject type="String"></dataobject>
+            </data>
+        </parameter>
+        <parameter id="06b2478b-df5c-1004-86cf-cb5c2c05cddb" name="outputTemplate">
+            <currentType value="String"/>
+            <data>
+                <dataobject type="String"></dataobject>
+            </data>
+        </parameter>
+        <parameter id="06b247a7-df5c-1004-86cf-cb5c2c05cddb" name="inputFile">
             <currentType value="String"/>
             <data>
                 <dataobject type="String"></dataobject>
@@ -75,7 +75,7 @@
         <parameter id="6c2b6afe-df51-1004-84b6-42360e02a5cd" name="inputTemplate">
             <currentType value="String"/>
             <data>
-                <dataobject type="String">&lt;style&gt; #VPCstyle .layout-column { min-width: 500px; margin: 15px; padding: 15px; background: white; } &lt;/style&gt; &lt;div id="VPCstyle"&gt; &lt;h2&gt;VPC Tool&lt;/h2&gt; &lt;div layout="row" layout-wrap layout-align="center start"&gt; &lt;div layout="column"&gt; &lt;h3&gt;Hidden Inputs&lt;/h3&gt; &lt;md-input-container&gt; &lt;input id="displayName" type="text"&gt; &lt;/md-input-container&gt; &lt;md-input-container&gt; &lt;input id="companyId" type="text"&gt; &lt;/md-input-container&gt; &lt;md-input-container&gt; &lt;input id="companyName" type="text"&gt; &lt;/md-input-container&gt; &lt;md-input-container&gt; &lt;input id="email" type="text"&gt; &lt;/md-input-container&gt; &lt;/div&gt; &lt;div layout="column"&gt; &lt;h3&gt;User Inputs&lt;/h3&gt; &lt;md-input-container&gt; &lt;label&gt;Auth Token&lt;/label&gt; &lt;input id="authToken" type="text"&gt; &lt;/md-input-container&gt; &lt;md-input-container&gt; &lt;label&gt;Contact Info (Email)&lt;/label&gt; &lt;input id="contactInfo" type="text"&gt; &lt;/md-input-container&gt; &lt;md-input-container&gt; &lt;label&gt;Expiration Date&lt;/label&gt; &lt;input id="expireDate" type="date"&gt; &lt;/md-input-container&gt; &lt;/div&gt; &lt;/div&gt; &lt;button ng-click='run()'&gt;RUN&lt;/button&gt; &lt;/div&gt; &lt;script&gt; $(document).ready(function() { var scope = angular.element($(".ng-scope")[0]).scope(); var userData = scope.userData; var displayName = userData.displayName; var companyId = userData.companyId; var email = userData.email; var companyName = userData.companyName; $('#displayName').val(displayName); $('#companyId').val(companyId); $('#email').val(email); $('#companyName').val(companyName); }); &lt;/script&gt;</dataobject>
+                <dataobject type="String">&lt;style&gt; #VPCstyle .layout-column { min-width: 500px; margin: 15px; padding: 15px; background: white; height: 100%; } &lt;/style&gt; &lt;div class="project-run-services padding-10" ng-if="!runHistory" ng-show="hasCustomUI &amp;&amp; service.interfaceModel.inParams.inputFile" layout="column"&gt; &lt;div id="VPCstyle"&gt; &lt;div layout="row" layout-wrap layout-align="center start"&gt; &lt;div layout="column" ng-hide="true"&gt; &lt;md-input-container&gt; &lt;input id="displayName" type="text"&gt; &lt;/md-input-container&gt; &lt;md-input-container&gt; &lt;input id="companyId" type="text"&gt; &lt;/md-input-container&gt; &lt;md-input-container&gt; &lt;input id="companyName" type="text"&gt; &lt;/md-input-container&gt; &lt;md-input-container&gt; &lt;input id="email" type="text"&gt; &lt;/md-input-container&gt; &lt;/div&gt; &lt;div layout="column" flex&gt; &lt;h3&gt;Other Inputs:&lt;/h3&gt; &lt;md-input-container&gt; &lt;label&gt;Auth Token&lt;/label&gt; &lt;input id="authToken" type="text"&gt; &lt;/md-input-container&gt; &lt;md-input-container&gt; &lt;label&gt;Contact Info (Email)&lt;/label&gt; &lt;input id="contactInfo" type="text"&gt; &lt;/md-input-container&gt; &lt;md-input-container&gt; &lt;label&gt;Expiration Date&lt;/label&gt; &lt;input id="expireDate" type="date"&gt; &lt;/md-input-container&gt; &lt;md-input-container&gt; &lt;input id="inputFile" type="text"&gt; &lt;/md-input-container&gt; &lt;/div&gt; &lt;/div&gt; &lt;button class="md-raised md-primary md-button md-default-theme right" ng-click='run()'&gt;RUN&lt;/button&gt; &lt;/div&gt; &lt;/div&gt; &lt;script&gt; $(document).ready(function() { var scope = angular.element($(".ng-scope")[0]).scope(); var userData = scope.userData; var displayName = userData.displayName; var companyId = userData.companyId; var email = userData.email; var companyName = userData.companyName; $('#displayName').val(displayName); $('#companyId').val(companyId); $('#email').val(email); $('#companyName').val(companyName); }); &lt;/script&gt;</dataobject>
             </data>
         </parameter>
         <parameter id="6c2b6b9d-df51-1004-84b6-42360e02a5cd" name="displayName">
@@ -114,25 +114,25 @@
                 <dataobject type="String"></dataobject>
             </data>
         </parameter>
-        <parameter id="fbfdf097-df51-1004-86d2-7ac963ddea2f" name="outputs">
-            <currentType value="String"/>
-            <data>
-                <dataobject type="String"></dataobject>
-            </data>
-        </parameter>
-        <parameter id="fbfdf09a-df51-1004-86d2-7ac963ddea2f" name="outputTemplate">
-            <currentType value="String"/>
-            <data>
-                <dataobject type="String">&lt;p&gt;Inputs were:&lt;/p&gt;&lt;p&gt;{{outputs}}&lt;/p&gt;</dataobject>
-            </data>
-        </parameter>
         <parameter id="95721087-df53-1004-853c-8207a9499fc7" name="companyName">
             <currentType value="String"/>
             <data>
                 <dataobject type="String"></dataobject>
             </data>
         </parameter>
-        <parameter id="06b2473d-df5c-1004-86cf-cb5c2c05cddb" name="finalFileName">
+        <parameter id="06b2473d-df5c-1004-86cf-cb5c2c05cddb" name="outputFile">
+            <currentType value="String"/>
+            <data>
+                <dataobject type="String"></dataobject>
+            </data>
+        </parameter>
+        <parameter id="06b2478c-df5c-1004-86cf-cb5c2c05cddb" name="outputTemplate">
+            <currentType value="String"/>
+            <data>
+                <dataobject type="String"></dataobject>
+            </data>
+        </parameter>
+        <parameter id="06b247a8-df5c-1004-86cf-cb5c2c05cddb" name="inputFile">
             <currentType value="String"/>
             <data>
                 <dataobject type="String"></dataobject>
@@ -151,10 +151,10 @@
                 <parameter name="expireDate" idRef="6c2b6ba5-df51-1004-84b6-42360e02a5cd"/>
                 <parameter name="email" idRef="6c2b6ba8-df51-1004-84b6-42360e02a5cd"/>
                 <parameter name="authToken" idRef="6c2b6bab-df51-1004-84b6-42360e02a5cd"/>
-                <parameter name="outputs" idRef="fbfdf096-df51-1004-86d2-7ac963ddea2f"/>
-                <parameter name="outputTemplate" idRef="fbfdf099-df51-1004-86d2-7ac963ddea2f"/>
                 <parameter name="companyName" idRef="95721086-df53-1004-853c-8207a9499fc7"/>
-                <parameter name="finalFileName" idRef="06b2473c-df5c-1004-86cf-cb5c2c05cddb"/>
+                <parameter name="outputFile" idRef="06b2473c-df5c-1004-86cf-cb5c2c05cddb"/>
+                <parameter name="outputTemplate" idRef="06b2478b-df5c-1004-86cf-cb5c2c05cddb"/>
+                <parameter name="inputFile" idRef="06b247a7-df5c-1004-86cf-cb5c2c05cddb"/>
             </modelobjects>
         </context>
     </contexts>
@@ -169,31 +169,31 @@
                     <parameter name="expireDate" idRef="6c2b6ba6-df51-1004-84b6-42360e02a5cd"/>
                     <parameter name="email" idRef="6c2b6ba9-df51-1004-84b6-42360e02a5cd"/>
                     <parameter name="authToken" idRef="6c2b6bac-df51-1004-84b6-42360e02a5cd"/>
-                    <parameter name="outputs" idRef="fbfdf097-df51-1004-86d2-7ac963ddea2f"/>
-                    <parameter name="outputTemplate" idRef="fbfdf09a-df51-1004-86d2-7ac963ddea2f"/>
                     <parameter name="companyName" idRef="95721087-df53-1004-853c-8207a9499fc7"/>
-                    <parameter name="finalFileName" idRef="06b2473d-df5c-1004-86cf-cb5c2c05cddb"/>
+                    <parameter name="outputFile" idRef="06b2473d-df5c-1004-86cf-cb5c2c05cddb"/>
+                    <parameter name="outputTemplate" idRef="06b2478c-df5c-1004-86cf-cb5c2c05cddb"/>
+                    <parameter name="inputFile" idRef="06b247a8-df5c-1004-86cf-cb5c2c05cddb"/>
                 </modelobjects>
             </context>
         </view>
         <view name="Interface Causality View">
             <filter id="INPUTS_FILTER" name="Inputs">
                 <parameters>
-                    <parameter name="companyName" idRef="95721087-df53-1004-853c-8207a9499fc7"/>
-                    <parameter name="contactInfo" idRef="6c2b6ba3-df51-1004-84b6-42360e02a5cd"/>
-                    <parameter name="expireDate" idRef="6c2b6ba6-df51-1004-84b6-42360e02a5cd"/>
                     <parameter name="inputTemplate" idRef="6c2b6afe-df51-1004-84b6-42360e02a5cd"/>
+                    <parameter name="contactInfo" idRef="6c2b6ba3-df51-1004-84b6-42360e02a5cd"/>
+                    <parameter name="inputFile" idRef="06b247a8-df5c-1004-86cf-cb5c2c05cddb"/>
+                    <parameter name="companyName" idRef="95721087-df53-1004-853c-8207a9499fc7"/>
                     <parameter name="companyId" idRef="6c2b6ba0-df51-1004-84b6-42360e02a5cd"/>
-                    <parameter name="authToken" idRef="6c2b6bac-df51-1004-84b6-42360e02a5cd"/>
-                    <parameter name="email" idRef="6c2b6ba9-df51-1004-84b6-42360e02a5cd"/>
                     <parameter name="displayName" idRef="6c2b6b9d-df51-1004-84b6-42360e02a5cd"/>
-                    <parameter name="outputTemplate" idRef="fbfdf09a-df51-1004-86d2-7ac963ddea2f"/>
+                    <parameter name="email" idRef="6c2b6ba9-df51-1004-84b6-42360e02a5cd"/>
+                    <parameter name="expireDate" idRef="6c2b6ba6-df51-1004-84b6-42360e02a5cd"/>
+                    <parameter name="authToken" idRef="6c2b6bac-df51-1004-84b6-42360e02a5cd"/>
                 </parameters>
             </filter>
             <filter id="OUTPUTS_FILTER" name="Outputs">
                 <parameters>
-                    <parameter name="outputs" idRef="fbfdf097-df51-1004-86d2-7ac963ddea2f" causality="Result"/>
-                    <parameter name="finalFileName" idRef="06b2473d-df5c-1004-86cf-cb5c2c05cddb" causality="Result"/>
+                    <parameter name="outputTemplate" idRef="06b2478c-df5c-1004-86cf-cb5c2c05cddb" causality="Result"/>
+                    <parameter name="outputFile" idRef="06b2473d-df5c-1004-86cf-cb5c2c05cddb" causality="Result"/>
                 </parameters>
             </filter>
             <filter id="INDETERMINATES_FILTER" name="Indeterminates"/>
@@ -202,6 +202,8 @@
     <directedGraph id="6c2b6a60-df51-1004-84b6-42360e02a5cd">
         <nodes>
             <node idRef="06b2473d-df5c-1004-86cf-cb5c2c05cddb"/>
+            <node idRef="06b2478c-df5c-1004-86cf-cb5c2c05cddb"/>
+            <node idRef="06b247a8-df5c-1004-86cf-cb5c2c05cddb"/>
             <node idRef="6c2b6afe-df51-1004-84b6-42360e02a5cd"/>
             <node idRef="6c2b6b9d-df51-1004-84b6-42360e02a5cd"/>
             <node idRef="6c2b6ba0-df51-1004-84b6-42360e02a5cd"/>
@@ -210,46 +212,50 @@
             <node idRef="6c2b6ba9-df51-1004-84b6-42360e02a5cd"/>
             <node idRef="6c2b6bac-df51-1004-84b6-42360e02a5cd"/>
             <node idRef="95721087-df53-1004-853c-8207a9499fc7"/>
-            <node idRef="fbfdf097-df51-1004-86d2-7ac963ddea2f"/>
-            <node idRef="fbfdf09a-df51-1004-86d2-7ac963ddea2f"/>
         </nodes>
         <arcs>
+            <from idRef="06b247a8-df5c-1004-86cf-cb5c2c05cddb">
+                <to idRef="06b2473d-df5c-1004-86cf-cb5c2c05cddb"/>
+                <to idRef="06b2478c-df5c-1004-86cf-cb5c2c05cddb"/>
+            </from>
             <from idRef="6c2b6afe-df51-1004-84b6-42360e02a5cd">
                 <to idRef="06b2473d-df5c-1004-86cf-cb5c2c05cddb"/>
-                <to idRef="fbfdf097-df51-1004-86d2-7ac963ddea2f"/>
+                <to idRef="06b2478c-df5c-1004-86cf-cb5c2c05cddb"/>
             </from>
             <from idRef="6c2b6b9d-df51-1004-84b6-42360e02a5cd">
                 <to idRef="06b2473d-df5c-1004-86cf-cb5c2c05cddb"/>
-                <to idRef="fbfdf097-df51-1004-86d2-7ac963ddea2f"/>
+                <to idRef="06b2478c-df5c-1004-86cf-cb5c2c05cddb"/>
             </from>
             <from idRef="6c2b6ba0-df51-1004-84b6-42360e02a5cd">
                 <to idRef="06b2473d-df5c-1004-86cf-cb5c2c05cddb"/>
-                <to idRef="fbfdf097-df51-1004-86d2-7ac963ddea2f"/>
+                <to idRef="06b2478c-df5c-1004-86cf-cb5c2c05cddb"/>
             </from>
             <from idRef="6c2b6ba3-df51-1004-84b6-42360e02a5cd">
                 <to idRef="06b2473d-df5c-1004-86cf-cb5c2c05cddb"/>
-                <to idRef="fbfdf097-df51-1004-86d2-7ac963ddea2f"/>
+                <to idRef="06b2478c-df5c-1004-86cf-cb5c2c05cddb"/>
             </from>
             <from idRef="6c2b6ba6-df51-1004-84b6-42360e02a5cd">
                 <to idRef="06b2473d-df5c-1004-86cf-cb5c2c05cddb"/>
-                <to idRef="fbfdf097-df51-1004-86d2-7ac963ddea2f"/>
+                <to idRef="06b2478c-df5c-1004-86cf-cb5c2c05cddb"/>
             </from>
             <from idRef="6c2b6ba9-df51-1004-84b6-42360e02a5cd">
                 <to idRef="06b2473d-df5c-1004-86cf-cb5c2c05cddb"/>
-                <to idRef="fbfdf097-df51-1004-86d2-7ac963ddea2f"/>
+                <to idRef="06b2478c-df5c-1004-86cf-cb5c2c05cddb"/>
             </from>
             <from idRef="6c2b6bac-df51-1004-84b6-42360e02a5cd">
                 <to idRef="06b2473d-df5c-1004-86cf-cb5c2c05cddb"/>
-                <to idRef="fbfdf097-df51-1004-86d2-7ac963ddea2f"/>
+                <to idRef="06b2478c-df5c-1004-86cf-cb5c2c05cddb"/>
             </from>
             <from idRef="95721087-df53-1004-853c-8207a9499fc7">
                 <to idRef="06b2473d-df5c-1004-86cf-cb5c2c05cddb"/>
-                <to idRef="fbfdf097-df51-1004-86d2-7ac963ddea2f"/>
+                <to idRef="06b2478c-df5c-1004-86cf-cb5c2c05cddb"/>
             </from>
         </arcs>
     </directedGraph>
     <interfaceToRelParamMap>
         <iToRpMap relParamId="06b2473d-df5c-1004-86cf-cb5c2c05cddb" ifaceId="06b2473b-df5c-1004-86cf-cb5c2c05cddb"/>
+        <iToRpMap relParamId="06b2478c-df5c-1004-86cf-cb5c2c05cddb" ifaceId="06b2478a-df5c-1004-86cf-cb5c2c05cddb"/>
+        <iToRpMap relParamId="06b247a8-df5c-1004-86cf-cb5c2c05cddb" ifaceId="06b247a6-df5c-1004-86cf-cb5c2c05cddb"/>
         <iToRpMap relParamId="6c2b6afe-df51-1004-84b6-42360e02a5cd" ifaceId="6c2b6afc-df51-1004-84b6-42360e02a5cd"/>
         <iToRpMap relParamId="6c2b6b9d-df51-1004-84b6-42360e02a5cd" ifaceId="6c2b6b9b-df51-1004-84b6-42360e02a5cd"/>
         <iToRpMap relParamId="6c2b6ba0-df51-1004-84b6-42360e02a5cd" ifaceId="6c2b6b9e-df51-1004-84b6-42360e02a5cd"/>
@@ -258,7 +264,5 @@
         <iToRpMap relParamId="6c2b6ba9-df51-1004-84b6-42360e02a5cd" ifaceId="6c2b6ba7-df51-1004-84b6-42360e02a5cd"/>
         <iToRpMap relParamId="6c2b6bac-df51-1004-84b6-42360e02a5cd" ifaceId="6c2b6baa-df51-1004-84b6-42360e02a5cd"/>
         <iToRpMap relParamId="95721087-df53-1004-853c-8207a9499fc7" ifaceId="95721085-df53-1004-853c-8207a9499fc7"/>
-        <iToRpMap relParamId="fbfdf097-df51-1004-86d2-7ac963ddea2f" ifaceId="fbfdf095-df51-1004-86d2-7ac963ddea2f"/>
-        <iToRpMap relParamId="fbfdf09a-df51-1004-86d2-7ac963ddea2f" ifaceId="fbfdf098-df51-1004-86d2-7ac963ddea2f"/>
     </interfaceToRelParamMap>
 </modelinterface>
